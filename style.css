@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    width: 100%;
+}
+.bor{
+    border: 2px solid red;
+}
+.menue{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.menue ul{
+    list-style: none;
+    display: flex;
+    margin-top: 5px;
+  
+    margin-right: 15px;
+}
+.menue ul a{
+    margin-top: 1px;
+    text-decoration: none;
+    padding-left: 8px;
+}
+#check{
+    display: none;
+}
+.checkbtn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:768px) {
+    .checkbtn{
+        display: block;
+    }
+
+    .menue ul{
+        display: none;
+        position: fixed;
+        
+        transition: left;
+        transition-duration: 2s;
+        left:-100%;
+        
+    }
+}
+
+#check:checked ~ul {
+    left: 0%;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; 
+    position: fixed;
+    top: 26px;
+    
+  
+    
+}
